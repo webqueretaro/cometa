@@ -24,44 +24,6 @@
             text-align: center;
         }
 
-        /* Estilos para la barra de navegación - mejorada para móviles */
-        nav {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 8px;
-            font-weight: bold;
-            display: inline-block;
-        }
-
-        /* Responsive para móviles */
-        @media (max-width: 600px) {
-            nav {
-                display: flex;
-                flex-direction: column;
-                padding: 5px;
-            }
-            
-            nav a {
-                padding: 10px 0;
-                margin: 0;
-                border-bottom: 1px solid #555;
-            }
-            
-            nav a:last-child {
-                border-bottom: none;
-            }
-        }
-
-        nav a:hover {
-            color: #4CAF50;
-        }
-
         /* Estilos para el contenido principal */
         main {
             padding: 20px;
@@ -69,7 +31,7 @@
             margin: 0 auto;
         }
 
-        /* Estilos para el pie de página - modificado */
+        /* Estilos para el pie de página */
         footer {
             text-align: center;
             padding: 10px 0;
@@ -123,22 +85,14 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-        }
-
-        form button:hover {
-            background-color: #45a049;
-        }
-        
-        /* Animación para el botón */
-        form button {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         form button:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        
+
         form button:active {
             transform: translateY(0);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -149,13 +103,6 @@
     <header>
         <h1>Bienvenido a Mi Página Web Mariana</h1>
     </header>
-
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#acerca-de">Acerca de</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
 
     <main>
         <section id="inicio">
@@ -195,19 +142,10 @@
                 <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
                 
                 <!-- Configuraciones adicionales de FormSubmit -->
-                <!-- Redirección después del envío (opcional) - Crea un archivo gracias.html -->
-                <input type="hidden" name="_next" value=" https://webqueretaro.github.io/cometa/gracias.html">
-                
-                <!-- Asunto del correo electrónico -->
+                <input type="hidden" name="_next" value="https://webqueretaro.github.io/cometa/gracias.html">
                 <input type="hidden" name="_subject" value="Nuevo mensaje del sitio web">
-                
-                <!-- Desactivar captcha (opcional) -->
                 <input type="hidden" name="_captcha" value="false">
-                
-                <!-- Plantilla de correo (opcional) -->
                 <input type="hidden" name="_template" value="table">
-                
-                <!-- Evitar spam -->
                 <input type="text" name="_honey" style="display:none">
                 
                 <button type="submit">Enviar Mensaje</button>
