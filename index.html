@@ -13,6 +13,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            padding-bottom: 20px; /* Añadir espacio en la parte inferior */
         }
 
         /* Estilos para el encabezado */
@@ -23,7 +24,7 @@
             text-align: center;
         }
 
-        /* Estilos para la barra de navegación */
+        /* Estilos para la barra de navegación - mejorada para móviles */
         nav {
             background-color: #333;
             padding: 10px;
@@ -33,8 +34,28 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 8px;
             font-weight: bold;
+            display: inline-block;
+        }
+
+        /* Responsive para móviles */
+        @media (max-width: 600px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                padding: 5px;
+            }
+            
+            nav a {
+                padding: 10px 0;
+                margin: 0;
+                border-bottom: 1px solid #555;
+            }
+            
+            nav a:last-child {
+                border-bottom: none;
+            }
         }
 
         nav a:hover {
@@ -48,15 +69,12 @@
             margin: 0 auto;
         }
 
-        /* Estilos para el pie de página */
+        /* Estilos para el pie de página - modificado */
         footer {
-            background-color: #333;
-            color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            margin-top: 30px;
+            color: #333;
         }
 
         /* Estilos para la galería de imágenes */
@@ -71,6 +89,13 @@
             margin-bottom: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Responsive para la galería */
+        @media (max-width: 600px) {
+            .galeria-container img {
+                width: 90%;
+            }
         }
 
         /* Estilos para el formulario de contacto */
@@ -102,6 +127,21 @@
 
         form button:hover {
             background-color: #45a049;
+        }
+        
+        /* Animación para el botón */
+        form button {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        form button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -139,17 +179,38 @@
 
         <section id="contacto">
             <h2>Contacto</h2>
-            <form action="#" method="post">
+            
+            <!-- Formulario con FormSubmit -->
+            <form action="https://formsubmit.co/arcosqueretaro@gmail.com" method="POST">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
                 <label for="email">Correo electrónico:</label>
                 <input type="email" id="email" name="email" required>
 
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto">
+
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-                <button type="submit">Enviar</button>
+                
+                <!-- Configuraciones adicionales de FormSubmit -->
+                <!-- Redirección después del envío (opcional) - Crea un archivo gracias.html -->
+                <input type="hidden" name="_next" value="https://github.com/webqueretaro/cometa.git/proyecto/gracias.html">
+                
+                <!-- Asunto del correo electrónico -->
+                <input type="hidden" name="_subject" value="Nuevo mensaje del sitio web">
+                
+                <!-- Desactivar captcha (opcional) -->
+                <input type="hidden" name="_captcha" value="false">
+                
+                <!-- Plantilla de correo (opcional) -->
+                <input type="hidden" name="_template" value="table">
+                
+                <!-- Evitar spam -->
+                <input type="text" name="_honey" style="display:none">
+                
+                <button type="submit">Enviar Mensaje</button>
             </form>
         </section>
     </main>
