@@ -112,7 +112,7 @@
 
         <section id="acerca-de">
             <h2>Acerca de Mí</h2>
-            <p>Hola, soy [Tu Nombre] y esta es mi primera página web. Estoy aprendiendo a crear sitios web usando HTML y CSS.</p>
+            <p>Hola, soy Mariana y esta es mi primera página web. Estoy aprendiendo a crear sitios web usando HTML y CSS.</p>
         </section>
 
         <section id="galeria">
@@ -126,9 +126,8 @@
 
         <section id="contacto">
             <h2>Contacto</h2>
-            
-            <!-- Formulario con FormSubmit -->
-            <form action="https://formsubmit.co/arcosqueretaro@gmail.com" method="POST">
+            <!-- Formulario integrado con Google Apps Script -->
+            <form action="https://script.google.com/macros/s/[TU_SCRIPT_ID]/exec" method="post">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
@@ -141,17 +140,16 @@
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
                 
-                <!-- Configuraciones adicionales de FormSubmit -->
-                <input type="hidden" name="_next" value="https://webqueretaro.github.io/cometa/gracias.html">
-                <input type="hidden" name="_subject" value="Nuevo mensaje del sitio web">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="text" name="_honey" style="display:none">
-                
                 <button type="submit">Enviar Mensaje</button>
             </form>
         </section>
     </main>
+
+    <footer>
+        <p>© 2025 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
 
     <footer>
         <p>&copy; 2023 Mi Página Web. Todos los derechos reservados.</p>
