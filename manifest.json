@@ -1,0 +1,16 @@
+{
+    "name": "Asteroids Tetris",
+    "short_name": "AstTet",
+    "description": "Un juego que combina Asteroids y Tetris",
+    "start_url": "/juego/",
+    "display": "standalone",
+    "background_color": "#306230",
+    "theme_color": "#00FF00",
+    "icons": [
+        {
+            "src": "/juego/icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
